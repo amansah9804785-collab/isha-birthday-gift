@@ -1,0 +1,499 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffe5ef">
+<title>For My Saneey ❤️</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+ font-family:'Trebuchet MS',sans-serif;
+ background:linear-gradient(135deg,#fff0f6,#f7edff,#fff7ed);
+ color:#713d59;overflow-x:hidden;
+}
+nav{
+ position:sticky;top:0;z-index:100;
+ background:#fff9f2ed;backdrop-filter:blur(12px);
+ padding:15px;display:flex;justify-content:space-between;
+ align-items:center;box-shadow:0 2px 12px #e9a4c333;
+}
+nav b{color:#d64f87}
+nav a{text-decoration:none;color:#a94776;font-weight:bold}
+.hero{
+ min-height:90vh;display:flex;align-items:center;
+ justify-content:center;text-align:center;padding:25px;
+}
+.hero-box{
+ background:#ffffffd9;padding:35px 20px;
+ border-radius:30px;max-width:750px;width:100%;
+ box-shadow:0 15px 45px #d77da329;
+}
+.hero h1{
+ font-family:Georgia,serif;color:#b74479;
+ font-size:clamp(42px,9vw,75px);margin:20px 0;
+}
+.hero h1 span{color:#f16c9e}
+.hero p{line-height:1.8;margin:20px auto;max-width:550px}
+section{padding:65px 17px;max-width:1100px;margin:auto}
+.heading{text-align:center;margin-bottom:30px}
+.heading h2{
+ font-family:Georgia,serif;
+ font-size:clamp(28px,6vw,43px);
+ color:#bd4b80;margin-bottom:10px;
+}
+.heading p{color:#9b7188}
+.btn{
+ border:none;
+ background:linear-gradient(120deg,#ff94b8,#e95d94);
+ color:white;padding:14px 23px;border-radius:30px;
+ font-weight:bold;font-size:15px;cursor:pointer;margin:8px;
+ box-shadow:0 7px 20px #ed7cae40;
+}
+.btn:active{transform:scale(.96)}
+.gallery{
+ display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+ gap:13px;
+}
+.photo-card{
+ background:white;padding:9px;border-radius:18px;
+ box-shadow:0 8px 22px #d77da322;
+}
+.photo-card img{
+ width:100%;height:230px;object-fit:cover;
+ border-radius:13px;display:block;
+}
+.photo-card p{text-align:center;padding:12px 3px;font-weight:bold}
+.video-grid{display:grid;grid-template-columns:1fr;gap:18px}
+.video-card{
+ background:white;border-radius:20px;padding:10px;
+ box-shadow:0 8px 22px #d77da322;
+}
+.video-card video{
+ width:100%;max-height:650px;aspect-ratio:9/16;
+ object-fit:contain;background:#251c22;
+ border-radius:14px;display:block;
+}
+.video-card p{text-align:center;padding:12px;font-weight:bold}
+.letter{
+ background:#fff;padding:30px 23px;border-radius:24px;
+ line-height:1.9;box-shadow:0 10px 30px #d77da322;
+}
+.letter h2{color:#c24e83;font-family:Georgia,serif;margin-bottom:20px}
+.letter p{margin-bottom:17px}
+.reason-grid{
+ display:grid;grid-template-columns:repeat(2,1fr);gap:12px;
+}
+.reason{
+ padding:22px 10px;background:white;border-radius:18px;
+ text-align:center;box-shadow:0 6px 20px #d77da322;
+ line-height:1.6;
+}
+.reason span{display:block;font-size:35px;margin-bottom:8px}
+.surprise{
+ background:white;padding:25px 17px;border-radius:22px;
+ text-align:center;box-shadow:0 8px 25px #d77da322;
+ margin-bottom:15px;
+}
+.surprise .emoji{font-size:48px}
+.hidden-message{
+ display:none;background:#fff0f6;padding:17px;
+ margin-top:15px;border-radius:15px;line-height:1.8;
+}
+.hidden-message.show{display:block}
+.cake{border:none;background:transparent;font-size:70px;cursor:pointer;padding:10px}
+.final{
+ text-align:center;padding:55px 20px;background:white;
+ border-radius:25px;box-shadow:0 10px 30px #d77da322;
+}
+.final h2{
+ font-family:Georgia,serif;color:#d64f87;
+ font-size:35px;margin:15px;
+}
+footer{text-align:center;padding:40px 15px;line-height:2;color:#9b7188}
+.heart{
+ position:fixed;bottom:-40px;pointer-events:none;
+ z-index:200;animation:floatUp 5s linear forwards;
+}
+@keyframes floatUp{
+ to{transform:translateY(-110vh) rotate(35deg);opacity:0}
+}
+@media(min-width:650px){
+ .gallery{grid-template-columns:repeat(4,1fr)}
+ .video-grid{grid-template-columns:repeat(3,1fr)}
+ .reason-grid{grid-template-columns:repeat(4,1fr)}
+}
+@media(max-width:370px){
+ .gallery{grid-template-columns:1fr}
+ .photo-card img{height:auto}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+ <b>♡ My Saneey</b>
+ <a href="#memories">Our Memories ↓</a>
+</nav>
+
+<!-- WELCOME -->
+<header class="hero">
+<div class="hero-box">
+ <p>✨ A SPECIAL DAY FOR SOMEONE SPECIAL ✨</p>
+ <h1>Happy Birthday<br><span>Isha Shah</span> 💗</h1>
+ <h3>My Saneey 🌷</h3>
+ <p>
+  माघ १३ | Magh 13<br>
+  To the girl who makes my world more beautiful.
+  This little website is made only for you, Saneey.
+  A place full of memories, surprises and love.
+ </p>
+ <button class="btn"
+ onclick="document.getElementById('memories').scrollIntoView({behavior:'smooth'})">
+ Start Your Surprise 🎁
+ </button>
+</div>
+</header>
+
+<!-- PHOTOS: ORIGINAL FILENAMES UNCHANGED -->
+<section id="memories">
+<div class="heading">
+ <h2>Our Beautiful Memories 📸</h2>
+ <p>Every picture tells a little story.</p>
+</div>
+
+<div class="gallery">
+
+<div class="photo-card">
+ <img src="pic 3.jpeg" alt="Isha photo 1">
+ <p>My Pretty Girl 🌸</p>
+</div>
+
+<div class="photo-card">
+ <img src="pic 4.jpeg" alt="Isha photo 2">
+ <p>My Favourite Memory 💗</p>
+</div>
+
+<div class="photo-card">
+ <img src="pic5.jpg.jpeg" alt="Isha photo 3">
+ <p>My Beautiful Saneey 🦋</p>
+</div>
+
+<div class="photo-card">
+ <img src="pic6.jpg.jpeg" alt="Isha photo 4">
+ <p>Forever Special ✨</p>
+</div>
+
+</div>
+</section>
+
+<!-- ONLY THE VIDEO FILES ARE CHANGED -->
+<section id="videos">
+<div class="heading">
+ <h2>Our Little Movie 🎬</h2>
+ <p>Some memories deserve to be watched again.</p>
+</div>
+
+<div class="video-grid">
+
+<div class="video-card">
+ <video controls playsinline preload="metadata">
+  <source src="gift.mp4" type="video/mp4">
+  Your browser cannot play this video.
+ </video>
+ <p>🎁 A Special Gift For You</p>
+</div>
+
+<div class="video-card">
+ <video controls playsinline preload="metadata">
+  <source src="isha3.mp4" type="video/mp4">
+  Your browser cannot play this video.
+ </video>
+ <p>💗 Beautiful Memories</p>
+</div>
+
+<div class="video-card">
+ <video controls playsinline preload="metadata">
+  <source src="isha4.mp4" type="video/mp4">
+  Your browser cannot play this video.
+ </video>
+ <p>🦋 My Favourite Moments</p>
+</div>
+
+</div>
+</section>
+
+<!-- LOVE LETTER -->
+<section>
+<div class="heading">
+ <h2>A Letter From My Heart 💌</h2>
+</div>
+
+<div class="letter">
+<h2>My Dearest Saneey, ❤️</h2>
+
+<p>
+Happy Birthday, my beautiful Isha Shah.
+Today is not just another day.
+Today is the birthday of someone
+who has a very special place in my heart.
+</p>
+
+<p>
+I don't know how to put every feeling
+into words, but I want you to know
+that I appreciate you.
+Your smile, your little habits,
+your personality and all the small
+moments we share mean a lot to me.
+</p>
+
+<p>
+I wish I could give you all the happiness
+in the world. I wish every dream you
+carry in your heart comes true.
+I hope you always find reasons to smile,
+strength when life becomes difficult,
+and people who treat you with kindness.
+</p>
+
+<p>
+I don't promise that every day will
+be perfect, but I hope we continue
+making beautiful memories,
+laughing at silly things,
+supporting each other
+and growing together.
+</p>
+
+<p>
+Never stop being the wonderful
+person you are.
+Keep shining, keep dreaming,
+and keep smiling.
+</p>
+
+<p>
+Happy Birthday once again,
+my Saneey. 💗
+</p>
+
+<p>
+With lots of love,<br>
+<strong>Your favourite person ❤️</strong>
+</p>
+</div>
+</section>
+
+<!-- REASONS -->
+<section>
+<div class="heading">
+ <h2>Reasons Why You Are Special 🌷</h2>
+ <p>Eight little reminders for you.</p>
+</div>
+
+<div class="reason-grid">
+ <div class="reason"><span>😊</span>Your beautiful smile</div>
+ <div class="reason"><span>🦋</span>Your unique personality</div>
+ <div class="reason"><span>💗</span>Your kind heart</div>
+ <div class="reason"><span>🌸</span>Your lovely little habits</div>
+ <div class="reason"><span>✨</span>Your dreams</div>
+ <div class="reason"><span>🌙</span>Your presence</div>
+ <div class="reason"><span>🎀</span>Your cuteness</div>
+ <div class="reason"><span>🌷</span>Simply being YOU</div>
+</div>
+</section>
+
+<!-- OPEN WHEN LETTERS -->
+<section>
+<div class="heading">
+ <h2>Open When... 💌</h2>
+ <p>Little messages for different moments.</p>
+</div>
+
+<div class="surprise">
+ <span class="emoji">🌧️</span>
+ <h3>Open when you feel sad</h3>
+ <button class="btn" onclick="reveal('sad')">Open Letter</button>
+ <p class="hidden-message" id="sad">
+ Saneey, take a deep breath.
+ You don't have to figure everything
+ out today. Be gentle with yourself.
+ You deserve happiness and kindness. 💗
+ </p>
+</div>
+
+<div class="surprise">
+ <span class="emoji">🌙</span>
+ <h3>Open when you can't sleep</h3>
+ <button class="btn" onclick="reveal('sleep')">Open Letter</button>
+ <p class="hidden-message" id="sleep">
+ Let the worries of today rest.
+ Tomorrow is a new beginning.
+ I hope your night is peaceful
+ and your dreams are beautiful. 🌙
+ </p>
+</div>
+
+<div class="surprise">
+ <span class="emoji">💗</span>
+ <h3>Open when you miss me</h3>
+ <button class="btn" onclick="reveal('miss')">Open Letter</button>
+ <p class="hidden-message" id="miss">
+ Here's a little reminder:
+ someone is thinking of you
+ and wishing you a beautiful day.
+ Keep a smile for me, Saneey. ❤️
+ </p>
+</div>
+
+<div class="surprise">
+ <span class="emoji">🎉</span>
+ <h3>Open when you need happiness</h3>
+ <button class="btn" onclick="reveal('happy')">Open Letter</button>
+ <p class="hidden-message" id="happy">
+ You are doing better than you think.
+ Celebrate your little victories.
+ Your dreams matter.
+ Keep shining, beautiful girl! 🌷
+ </p>
+</div>
+</section>
+
+<!-- GIFTS -->
+<section>
+<div class="heading">
+ <h2>A Gift Just For You 🎁</h2>
+ <p>Tap the box to reveal a surprise.</p>
+</div>
+
+<div class="surprise">
+ <div style="font-size:80px" id="giftEmoji">🎁</div>
+ <h3 id="giftTitle">A Little Birthday Gift</h3>
+ <p id="giftText">Your surprise is waiting...</p>
+ <button class="btn" onclick="openGift()">Open My Gift 💝</button>
+</div>
+</section>
+
+<!-- BIRTHDAY CAKE -->
+<section>
+<div class="heading">
+ <h2>Make A Birthday Wish 🎂</h2>
+ <p>Close your eyes and make a beautiful wish.</p>
+</div>
+
+<div class="surprise">
+ <button class="cake" onclick="makeWish()">🎂</button>
+ <h3 id="cakeText">Tap The Cake!</h3>
+ <p>May all your beautiful wishes come true.</p>
+</div>
+</section>
+
+<!-- FINAL -->
+<section>
+<div class="final">
+ <div style="font-size:65px">💗🌷🦋</div>
+ <h2>One Last Thing, Saneey...</h2>
+
+ <p style="line-height:1.9;margin:20px 0">
+ Isha Shah, you are one of a kind.
+ Your birthday deserves to be special.
+ I hope this little website makes
+ you smile today.
+ <br><br>
+ Happy Birthday, Saneey!
+ <br><br>
+ I LOVE YOU ❤️
+ </p>
+
+ <button class="btn" onclick="heartRain()">
+ Click For A Million Hearts 💗
+ </button>
+</div>
+</section>
+
+<footer>
+Made with love for Isha Shah<br>
+My Saneey ❤️<br>
+माघ १३ 🌷
+</footer>
+
+<script>
+
+function reveal(id){
+ document.getElementById(id).classList.toggle('show');
+}
+
+let gifts=[
+ ["🌷","A year filled with happiness and beautiful memories."],
+ ["💝","A pocket full of good luck and endless smiles."],
+ ["🦋","May all your dreams find their way to you."],
+ ["⭐","You deserve all the wonderful things in life."],
+ ["❤️","A thousand birthday wishes for my Saneey."]
+];
+
+let giftCount=0;
+
+function openGift(){
+ let gift=gifts[giftCount%gifts.length];
+
+ document.getElementById('giftEmoji').innerText=gift[0];
+ document.getElementById('giftText').innerText=gift[1];
+ document.getElementById('giftTitle').innerText=
+ "Surprise Number "+(giftCount+1);
+
+ giftCount++;
+ heartRain(8);
+}
+
+let wished=false;
+
+function makeWish(){
+ if(wished)return;
+
+ wished=true;
+
+ document.getElementById('cakeText').innerText=
+ "Your wish has been sent! Happy Birthday Saneey! 💗";
+
+ heartRain(30);
+}
+
+function heartRain(amount=25){
+
+ const icons=["💗","💕","💖","🌸","✨","🦋","❤️"];
+
+ for(let i=0;i<amount;i++){
+
+  let heart=document.createElement("span");
+
+  heart.className="heart";
+
+  heart.innerText=
+  icons[Math.floor(Math.random()*icons.length)];
+
+  heart.style.left=Math.random()*100+"vw";
+
+  heart.style.fontSize=
+  (18+Math.random()*22)+"px";
+
+  heart.style.animationDuration=
+  (3+Math.random()*4)+"s";
+
+  document.body.appendChild(heart);
+
+  setTimeout(()=>heart.remove(),7500);
+ }
+}
+
+window.addEventListener("load",()=>{
+ setTimeout(()=>heartRain(12),700);
+});
+
+</script>
+</body>
+</html>
